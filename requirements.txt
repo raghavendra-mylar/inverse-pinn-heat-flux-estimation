@@ -1,0 +1,12 @@
+# Core
+torch>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+scipy>=1.10.0
+
+# Notebook
+jupyterlab>=4.0.0
+ipykernel>=6.0.0
+
+# Optional: progress & logging
+tqdm>=4.65.0

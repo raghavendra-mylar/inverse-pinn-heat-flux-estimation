@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data & checkpoints (not shared — thesis data)
+data/
+checkpoints/
+*.pt
+*.pth
+*.h5
+*.csv
+*.dat
+
+# Figures (add manually if you want to share)
+figures/
+*.png
+*.pdf
+
+# Environments
+.env
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
