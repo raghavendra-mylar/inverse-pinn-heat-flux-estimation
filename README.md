@@ -39,9 +39,9 @@ This work uses a **Physics-Informed Neural Network in inverse mode** to recover 
  Hot Gas Side  →  q(x,t) = ?  [UNKNOWN - what we recover]
  ┌─────────────────────────────────────────────┐
  │        Copper Wall (2D Transient)           │
- │   ● ● ● ● ●   ← Sensor Row 1 (y=1.25mm)   │
- │   ● ● ● ● ●   ← Sensor Row 2 (y=2.50mm)   │
- │   ● ● ● ● ●   ← Sensor Row 3 (y=3.75mm)   │
+ │   ● ● ● ● ●   ← Sensor Row 1 (y=1.25mm)     │
+ │   ● ● ● ● ●   ← Sensor Row 2 (y=2.50mm)     │
+ │   ● ● ● ● ●   ← Sensor Row 3 (y=3.75mm)     │
  └─────────────────────────────────────────────┘
  Coolant Side  →  Robin BC: ∂T/∂y + Bi(x)·T = 0
 ```
