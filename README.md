@@ -4,11 +4,28 @@
   <img src="https://img.shields.io/badge/Framework-PyTorch-orange?style=for-the-badge&logo=pytorch" />
   <img src="https://img.shields.io/badge/Type-Inverse%20PINN-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Application-Rocket%20Propulsion-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Thesis%20Work-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Under%20Review-yellow?style=for-the-badge" />
 </p>
 
 > **M.Tech Thesis Work** — Indian Institute of Space Science and Technology (IIST)  
 > Specialization: Aerospace Engineering — Thermal & Propulsion
+
+---
+
+## 📄 Publication Status
+
+Manuscript under preparation for submission to:
+- *Journal of Computational Physics* (target)
+- *Applied Thermal Engineering* (alternate)
+
+> 🔬 **Research Disclosure Notice**  
+> Full training implementation is withheld pending journal submission.  
+> A complete reproducible codebase will be released upon acceptance.  
+> Architecture and parameterization files are provided for reference.  
+> For academic inquiries: **ragharit586@gmail.com**
+
+Full code release planned post-acceptance.  
+⭐ Star this repo to get notified when the paper and code drop.
 
 ---
 
@@ -55,7 +72,9 @@ The model was initialized **deliberately far from truth** to test genuine robust
 |------|-------------|-------------|
 | `truth` | ANSYS exact values as start | Baseline |
 | `blind` | Deliberately wrong (55% off peak, 20mm off center) | **0.72%** ✅ |
-| `random` | Fixed random seed, unknown basin | Thesis in progress |
+| `random` | Fixed random seed, unknown basin | In progress |
+
+> 📊 Loss convergence curves, heat flux recovery plots, and temperature field comparisons are available in [`results/RESULTS.md`](results/RESULTS.md).
 
 ---
 
@@ -93,6 +112,8 @@ Log-parameterization ensures strict positivity.
 
 ## Architecture
 
+> ✅ **Architecture is fully disclosed** — the network design is shared for reproducibility and reference.
+
 ```
 Input: [x, y, t]  (non-dimensional, mapped to [-1, 1])
          ↓
@@ -103,6 +124,8 @@ Input: [x, y, t]  (non-dimensional, mapped to [-1, 1])
 Total PINN parameters: 461,825
 Learnable q parameters: 4  (jointly optimized)
 ```
+
+See [`src/model.py`](src/model.py) for the full architecture implementation.
 
 ### Training Strategy
 
@@ -162,7 +185,7 @@ Ground truth generated in **ANSYS Fluent** with:
 inverse-pinn-heat-flux-estimation/
 │
 ├── src/
-│   ├── model.py          # PINN architecture (partial showcase)
+│   ├── model.py          # PINN architecture — fully disclosed
 │   ├── heat_flux.py      # Gaussian q(x,t) parameterization
 │   └── boundary.py       # Biot number function and BC helpers
 │
@@ -170,13 +193,11 @@ inverse-pinn-heat-flux-estimation/
 │   └── RESULTS.md        # Quantitative recovery results
 │
 ├── notebooks/
-│   └── README.md         # Notebook description (full code on request)
+│   └── README.md         # Full notebook release planned post-publication
 │
 ├── requirements.txt
 └── README.md
 ```
-
-> ⚠️ **Note**: Full training code is part of an ongoing M.Tech thesis. Complete implementation available upon reasonable academic request.
 
 ---
 
@@ -210,7 +231,7 @@ Indian Institute of Space Science and Technology (IIST)
 Thiruvananthapuram, Kerala, India  
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raghavendra-mylar-b00b95240/)  
-[![GitHub](https://img.shields.io/badge/GitHub-ragharit586--pixel-black?style=flat&logo=github)](https://github.com/ragharit586-pixel)
+[![GitHub](https://img.shields.io/badge/GitHub-raghavendra--mylar-black?style=flat&logo=github)](https://github.com/raghavendra-mylar)
 
 ---
 
