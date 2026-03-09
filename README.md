@@ -36,14 +36,19 @@ In regenerative cooling channels of rocket engines, the **heat flux applied at t
 This work uses a **Physics-Informed Neural Network in inverse mode** to recover the full spatiotemporal heat flux distribution `q(x, t)` from only **15 thermocouple sensors**, without any direct flux measurement.
 
 ```
- Hot Gas Side  →  q(x,t) = ?  [UNKNOWN - what we recover]
- ┌─────────────────────────────────────────────┐
- │        Copper Wall (2D Transient)           │
- │   ● ● ● ● ●   ← Sensor Row 1 (y=1.25mm)   │
- │   ● ● ● ● ●   ← Sensor Row 2 (y=2.50mm)   │
- │   ● ● ● ● ●   ← Sensor Row 3 (y=3.75mm)   │
- └─────────────────────────────────────────────┘
- Coolant Side  →  Robin BC: ∂T/∂y + Bi(x)·T = 0
+  HOT GAS SIDE  →  q(x,t) = ?  [ UNKNOWN — WHAT WE RECOVER ]
+      ↓↓↓       ↓↓↓       ↓↓↓       ↓↓↓       ↓↓↓      heat flux
+ ┌─────────────────────────────────────────────┐  y = 0  (hot wall)
+ │         Copper Wall  [ L = 200 mm × δ = 5 mm ]          │
+ │ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
+ │   ●     ●     ●     ●     ●    ←  Sensor Row 1 (y = 1.25 mm) │
+ │ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
+ │   ●     ●     ●     ●     ●    ←  Sensor Row 2 (y = 2.50 mm) │
+ │ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
+ │   ●     ●     ●     ●     ●    ←  Sensor Row 3 (y = 3.75 mm) │
+ │ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ │
+ └─────────────────────────────────────────────┘  y = δ = 5 mm (coolant)
+  COOLANT SIDE  →  Robin BC: ∂T/∂y + Bi(x)·T = 0
 ```
 
 ---
